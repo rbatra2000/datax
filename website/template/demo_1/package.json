@@ -1,7 +1,7 @@
 {
   "name": "corona-react",
   "version": "1.1.0",
-  "homepage": "http://bootstrapdash.com/demo/corona-react-free/template/demo_1/preview",
+  "homepage": "http://rbatra2000.github.io/datax",
   "private": true,
   "dependencies": {
     "@lourenci/react-kanban": "^0.13.0",
@@ -65,7 +65,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
