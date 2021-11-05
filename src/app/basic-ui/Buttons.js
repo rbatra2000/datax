@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 class Buttons extends Component {
+
   render () {
     return (
       <div>
@@ -22,7 +22,7 @@ class Buttons extends Component {
                 <h4 className="card-title">Normal buttons</h4>
                 <p className="card-description">Use any of the available button classes to quickly create a styled button.</p>
                 <div className="template-demo">
-                  <button type="button" className="btn btn-primary btn-fw">Primary</button>
+                  <button type="button" onClick={fetch('https://datax-team9.herokuapp.com/data/data').then(response => response.json())} className="btn btn-primary btn-fw">Primary</button>
                   <button type="button" className="btn btn-secondary btn-fw">Secondary</button>
                   <button type="button" className="btn btn-success btn-fw">Success</button>
                   <button type="button" className="btn btn-danger btn-fw">Danger</button>
