@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "039361e612d278fc1b1e96fcd06f4dec",
+    "revision": "66aa70c209544fbe1fbd05e851e0fa27",
     "url": "/datax/index.html"
   },
   {
@@ -72,16 +72,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/datax/static/js/8.843b7e94.chunk.js"
   },
   {
-    "revision": "23d8e98c912d26ba5915",
-    "url": "/datax/static/js/9.34204cdd.chunk.js"
+    "revision": "c4e7e7c9d95a5e10153d",
+    "url": "/datax/static/js/9.9e1a4d39.chunk.js"
   },
   {
     "revision": "ac820cdde602e924e238",
     "url": "/datax/static/js/main.b5965de9.chunk.js"
   },
   {
-    "revision": "de0a2580ba028e8334a3",
-    "url": "/datax/static/js/runtime~main.ea16f5dd.js"
+    "revision": "4d445267cfa35b6dae49",
+    "url": "/datax/static/js/runtime~main.a0a2295b.js"
   },
   {
     "revision": "f54d958be5b48b4b2f5eebf1a677f6a7",
