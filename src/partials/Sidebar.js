@@ -100,7 +100,7 @@ function Sidebar({
               </NavLink>
             </li>
             {/* Customers */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'customers' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'customers' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'customers' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -110,9 +110,9 @@ function Sidebar({
                   <span className="text-sm font-medium">Customers</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Orders */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'orders' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'orders' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'orders' && 'hover:text-gray-200'}`}>
                 <div className="flex items-center justify-between">
                   <div className="flex flex-grow">
@@ -122,16 +122,16 @@ function Sidebar({
                       <path className={`fill-current text-gray-600 ${page === 'orders' && 'text-indigo-500'}`} d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z" />
                     </svg>
                     <span className="text-sm font-medium">Orders</span>
-                  </div>
+                  </div> */}
                   {/* Badge */}
-                  <div className="flex flex-shrink-0 ml-2">
+                  {/* <div className="flex flex-shrink-0 ml-2">
                     <span className="inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded-sm">4</span>
                   </div>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Campaigns */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'campaigns' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'campaigns' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'campaigns' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -141,9 +141,9 @@ function Sidebar({
                   <span className="text-sm font-medium">Campaigns</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Team */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page.startsWith('team-') && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page.startsWith('team-') && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page.startsWith('team-') && 'hover:text-gray-200'}`}>
                 <div className="flex items-center justify-between">
                   <div className="flex flex-grow">
@@ -152,9 +152,9 @@ function Sidebar({
                       <path className={`fill-current text-gray-400 ${page.startsWith('team-') && 'text-indigo-300'}`} d="M12 6a3 3 0 110-6 3 3 0 010 6zm2 18h-4a1 1 0 01-1-1v-6H6v-6a3 3 0 013-3h6a3 3 0 013 3v6h-3v6a1 1 0 01-1 1z" />
                     </svg>
                     <span className="text-sm font-medium">Team</span>
-                  </div>
+                  </div> */}
                   {/* Icon */}
-                  <div className="flex flex-shrink-0 ml-2">
+                  {/* <div className="flex flex-shrink-0 ml-2">
                     <svg className={`w-3 h-3 flex-shrink-0 ml-1 fill-current text-gray-400 ${page.startsWith('team-') && 'transform rotate-180'}`} viewBox="0 0 12 12">
                       <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
                     </svg>
@@ -173,9 +173,9 @@ function Sidebar({
                   </NavLink>
                 </li>
               </ul>
-            </li>
+            </li> */}
             {/* Messages */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'messages' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'messages' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'messages' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -185,9 +185,9 @@ function Sidebar({
                   <span className="text-sm font-medium">Messages</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Tasks */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'tasks' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'tasks' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'tasks' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -198,9 +198,9 @@ function Sidebar({
                   <span className="text-sm font-medium">Tasks</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Applications */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'applications' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'applications' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'applications' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -212,9 +212,9 @@ function Sidebar({
                   <span className="text-sm font-medium">Applications</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             {/* Settings */}
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'settings' && 'bg-gray-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'settings' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'settings' && 'hover:text-gray-200'}`}>
                 <div className="flex flex-grow">
                   <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -226,7 +226,7 @@ function Sidebar({
                   <span className="text-sm font-medium">Settings</span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
 
