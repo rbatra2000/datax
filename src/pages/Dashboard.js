@@ -30,7 +30,8 @@ import four from '../images/4.png';
 function Dashboard() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const [show, setShow] = useState("hidden")
+  
   return (
     <div className="flex h-screen overflow-hidden">
 
@@ -106,16 +107,23 @@ function Dashboard() {
 
             </div>
 
+
             <br />
-            <img src={one} style={{ maxWidth: '1000px', width: '1000px' }} alt="one" />
+            <button
+              className="inline-flex justify-center items-center group"
+              onClick={() => {setShow("visible")}}
+            >
+              CLICK ME
+        </button>
+            <img src={one} style={{ maxWidth: '1000px', width: '1000px',visibility:show}} alt="one" />
             <br />
-            <img src={two} style={{ maxWidth: '1000px', width: '1000px' }} alt="two" />
+            <img src={two} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="two" />
             <br />
 
-            <img src={three} style={{ maxWidth: '1000px', width: '1000px' }} alt="three" />
+            <img src={three} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="three" />
             <br />
 
-            <img src={four} style={{ maxWidth: '1000px', width: '1000px' }} alt="four" />
+            <img src={four} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="four" />
           </div>
 
         </main>
