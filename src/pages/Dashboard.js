@@ -14,6 +14,7 @@ import one from '../images/1.png';
 import two from '../images/2.png';
 import three from '../images/3.png';
 import four from '../images/4.png';
+import five from '../images/5.png';
 // import DashboardCard04 from '../partials/dashboard/DashboardCard04';
 // import DashboardCard05 from '../partials/dashboard/DashboardCard05';
 // import DashboardCard06 from '../partials/dashboard/DashboardCard06';
@@ -31,7 +32,7 @@ function Dashboard() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [show, setShow] = useState("hidden")
-  
+
   return (
     <div className="flex h-screen overflow-hidden">
 
@@ -111,19 +112,22 @@ function Dashboard() {
             <br />
             <button
               className="inline-flex justify-center items-center group"
-              onClick={() => {setShow("visible")}}
+              onClick={() => { setShow("visible") }}
             >
               CLICK ME
         </button>
-            <img src={one} style={{ maxWidth: '1000px', width: '1000px',visibility:show}} alt="one" />
+            <img src={one} style={{ maxWidth: '1000px', width: '1000px', visibility: show }} alt="one" />
             <br />
-            <img src={two} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="two" />
-            <br />
-
-            <img src={three} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="three" />
+            <img src={two} style={{ maxWidth: '1000px', width: '1000px', visibility: show }} alt="two" />
             <br />
 
-            <img src={four} style={{ maxWidth: '1000px', width: '1000px',visibility:show }} alt="four" />
+            <img src={three} style={{ maxWidth: '1000px', width: '1000px', visibility: show }} alt="three" />
+            <br />
+
+            <img src={four} style={{ maxWidth: '1000px', width: '1000px', visibility: show }} alt="four" />
+            <br />
+
+            <img src={five} style={{ maxWidth: '1000px', width: '1000px', visibility: show }} alt="five" />
           </div>
 
         </main>
