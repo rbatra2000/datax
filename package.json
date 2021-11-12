@@ -1,7 +1,6 @@
 {
   "name": "mosaic-light-react",
   "version": "0.1.0",
-  "homepage": "http://rbatra2000.github.io/datax",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
