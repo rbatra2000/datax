@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import {
   Switch,
   Route,
-  useLocation
+  useLocation,
+  BrowserRouter
 } from 'react-router-dom';
 
 import './css/style.scss';
@@ -26,11 +27,13 @@ function App() {
 
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <Dashboard />
-        </Route>
-      </Switch>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }
