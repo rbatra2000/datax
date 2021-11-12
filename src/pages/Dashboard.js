@@ -6,7 +6,7 @@ import WelcomeBanner from '../partials/dashboard/WelcomeBanner';
 import DashboardAvatars from '../partials/dashboard/DashboardAvatars';
 import FilterButton from '../partials/actions/FilterButton';
 import Datepicker from '../partials/actions/Datepicker';
-import { collection, getDocs } from "firebase/firestore";
+// import { collection, getDocs } from "firebase/firestore";
 import DashboardCard01 from '../partials/dashboard/DashboardCard01';
 import DashboardCard02 from '../partials/dashboard/DashboardCard02';
 import DashboardCard03 from '../partials/dashboard/DashboardCard03';
@@ -21,7 +21,7 @@ import DashboardCard03 from '../partials/dashboard/DashboardCard03';
 // import DashboardCard12 from '../partials/dashboard/DashboardCard12';
 // import DashboardCard13 from '../partials/dashboard/DashboardCard13';
 // import Banner from '../partials/Banner';
-import { dbh } from '../constants/firebase.js';
+// import { dbh } from '../constants/firebase.js';
 
 function Dashboard() {
 
