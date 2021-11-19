@@ -78,7 +78,7 @@ function DashboardCard01() {
             </li>
           </EditMenu>
         </header>
-        <h2 className="text-lg font-semibold text-gray-800 mb-2">Community A</h2>
+        <h2 className="text-lg font-semibold text-gray-800 mb-2">Brooklyn</h2>
         <div className="text-xs font-semibold text-gray-400 uppercase mb-1">Population Growth</div>
         <div className="flex items-start">
           <div className="text-3xl font-bold text-gray-800 mr-2">24,780</div>
