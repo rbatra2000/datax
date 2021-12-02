@@ -19,7 +19,7 @@ function DashboardCard01() {
   }
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/bus_covid")
+    fetch("https://datax-team9.herokuapp.com/bus_covid")
       .then(response => response.json()
         .then(data => {
           var old_dates = data["New Date"]
