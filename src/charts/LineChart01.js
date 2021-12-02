@@ -33,8 +33,8 @@ function LineChart01({
         },
         scales: {
           y: {
-            display: false,
-            beginAtZero: true,
+            beginAtZero: false,
+            display: true,
           },
           x: {
             type: 'time',
@@ -42,18 +42,12 @@ function LineChart01({
               parser: 'MM-DD-YYYY',
               unit: 'month',
             },
-            display: false,
+            display: true,
           },
         },
         plugins: {
-          tooltip: {
-            callbacks: {
-              title: () => false, // Disable tooltip title
-              label: (context) => formatValue(context.parsed.y),
-            },
-          },
           legend: {
-            display: false,
+            display: true,
           },
         },
         interaction: {
@@ -64,7 +58,7 @@ function LineChart01({
       },
     });
     return () => chart.destroy();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
