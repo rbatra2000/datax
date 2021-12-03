@@ -13,6 +13,7 @@ import './charts/ChartjsConfig';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
+import Subway from './pages/Subway';
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Dashboard />
+          </Route>
+          <Route exact path="/subway">
+            <Subway />
           </Route>
         </Switch>
       </BrowserRouter>
