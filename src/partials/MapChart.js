@@ -43,7 +43,7 @@ const MapChart = () => {
                     const obj = JSON.parse(data);
                     var chartInfo = []
                     for (var key in obj["Ranks"]) {
-                        chartInfo.push({ markerOffset: .003*key, name: "HELLO", coordinates: [obj["Longitude"][key], obj["Latitude"][key]] })
+                        chartInfo.push({ rank: key, markerOffset: .003 * key, name: obj["Station"][key], coordinates: [obj["Longitude"][key], obj["Latitude"][key]] })
                     }
                     setData(chartInfo)
                     console.log(chartInfo)
@@ -57,36 +57,46 @@ const MapChart = () => {
     }
 
     return (
-        <ComposableMap
-        >
-            <ZoomableGroup zoom={400} center={[-74.005974,40.712776]} maxZoom={1000}>
+        <div>
 
-                <Geographies geography={geoUrl}>
-                    {({ geographies }) =>
-                        geographies
-                        .map(geo => (
-                            <Geography key={geo.rsmKey}
-                                geography={geo}
-                                fill="#EAEAEC"
-                                stroke="#D6D6DA" />
-                        ))
-                    }
-                </Geographies>
-                {chartData.map(({ name, coordinates, markerOffset }) => (
-                    <Marker key={name} coordinates={coordinates}>
-                                <circle r={.01} fill="#F53" />
-                        <text
-                            textAnchor="middle"
-                            y={markerOffset}
-                            style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".01"}}
-                        >
-                            {name}
-                        </text>
-                    </Marker>
-                ))}
-            </ZoomableGroup>
+            <h1><strong>Busiest Subway Stations in NYC</strong></h1>
+            {chartData.map(({ rank, name, coordinates, markerOffset }) => (
+                <h2 key={name}>{rank}. {name}</h2>
+            ))}
+            <br />
 
-        </ComposableMap>
+
+            <ComposableMap
+            >
+                <ZoomableGroup zoom={400} center={[-74.005974, 40.712776]} maxZoom={1000}>
+
+                    <Geographies geography={geoUrl}>
+                        {({ geographies }) =>
+                            geographies
+                                .map(geo => (
+                                    <Geography key={geo.rsmKey}
+                                        geography={geo}
+                                        fill="#EAEAEC"
+                                        stroke="#D6D6DA" />
+                                ))
+                        }
+                    </Geographies>
+                    {chartData.map(({ name, coordinates, markerOffset }) => (
+                        <Marker key={name} coordinates={coordinates}>
+                            <circle r={.01} fill="#F53" />
+                            <text
+                                textAnchor="middle"
+                                y={markerOffset}
+                                style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".01" }}
+                            >
+                                {name}
+                            </text>
+                        </Marker>
+                    ))}
+                </ZoomableGroup>
+
+            </ComposableMap>
+        </div>
     );
 };
 
