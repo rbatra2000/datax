@@ -7,7 +7,7 @@ import EditMenu from '../EditMenu';
 // Import utilities
 import { tailwindConfig, hexToRGB } from '../../utils/Utils';
 
-function DashboardCard01() {
+function DashboardCard01a() {
 
   const [dates, setDates] = useState([])
   const [chartData, setData] = useState([])
@@ -135,4 +135,4 @@ function DashboardCard01() {
   );
 }
 
-export default DashboardCard01;
+export default DashboardCard01a;

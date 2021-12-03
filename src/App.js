@@ -14,6 +14,8 @@ import './charts/ChartjsConfig';
 // Import pages
 import Dashboard from './pages/Dashboard';
 import Subway from './pages/Subway';
+import Compare from './pages/Compare'
+import Maps from './pages/Maps';
 
 function App() {
 
@@ -30,12 +32,18 @@ function App() {
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/">
-            <Dashboard />
-          </Route>
           <Route exact path="/subway">
             <Subway />
           </Route>
+          <Route exact path="/compare">
+            <Compare />
+          </Route>  
+          <Route exact path="/maps">
+            <Maps />
+          </Route>  
+          <Route path="/">
+            <Dashboard />
+          </Route>       
         </Switch>
       </BrowserRouter>
     </>

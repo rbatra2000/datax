@@ -8,7 +8,9 @@ import FilterButton from '../partials/actions/FilterButton';
 import Datepicker from '../partials/actions/Datepicker';
 // import { collection, getDocs } from "firebase/firestore";
 import DashboardCard01a from '../partials/dashboard/DashboardCard01a';
-import DashboardCard02a from '../partials/dashboard/DashboardCard02a';
+import DashboardCard02b from '../partials/dashboard/DashboardCard02b';
+import DashboardCard02c from '../partials/dashboard/DashboardCard02c';
+
 import DashboardCard03a from '../partials/dashboard/DashboardCard03a';
 import one from '../images/1.png';
 import two from '../images/2.png';
@@ -78,11 +80,13 @@ function Subway() {
             <div className="grid grid-cols-12 gap-6">
 
               {/* Line chart (Acme Plus) */}
-              <DashboardCard01a />
+              <DashboardCard02b />
+              <DashboardCard02c />
+
               {/* Line chart (Acme Advanced) */}
-              <DashboardCard02a />
+              {/* <DashboardCard02a /> */}
               {/* Line chart (Acme Professional) */}
-              <DashboardCard03a />
+              {/* <DashboardCard03a /> */}
 
 
               {/* Bar chart (Direct vs Indirect) */}

@@ -111,6 +111,29 @@ function Sidebar({
                 </div>
               </NavLink>
             </li>
+            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'compare' && 'bg-gray-900'}`}>
+              <NavLink exact to="/compare" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'compare' && 'hover:text-gray-200'}`}>
+                <div className="flex flex-grow">
+                  <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
+                    <path className={`fill-current text-gray-400 ${page === 'compare' && 'text-indigo-300'}`} d="M13 15l11-7L11.504.136a1 1 0 00-1.019.007L0 7l13 8z" />
+                    <path className={`fill-current text-gray-700 ${page === 'compare' && 'text-indigo-600'}`} d="M13 15L0 7v9c0 .355.189.685.496.864L13 24v-9z" />
+                    <path className={`fill-current text-gray-600 ${page === 'compare' && 'text-indigo-500'}`} d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z" />
+                  </svg>
+                  <span className="text-sm font-medium">Compare</span>
+                </div>
+              </NavLink>
+            </li>
+            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'maps' && 'bg-gray-900'}`}>
+              <NavLink exact to="/maps" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'maps' && 'hover:text-gray-200'}`}>
+                <div className="flex flex-grow">
+                  <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
+                    <path className={`fill-current text-gray-600 ${page === 'maps' && 'text-indigo-500'}`} d="M20 7a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 0120 7zM4 23a.75.75 0 01-.75-.75 1.5 1.5 0 00-1.5-1.5.75.75 0 110-1.5 1.5 1.5 0 001.5-1.5.75.75 0 111.5 0 1.5 1.5 0 001.5 1.5.75.75 0 110 1.5 1.5 1.5 0 00-1.5 1.5A.75.75 0 014 23z" />
+                    <path className={`fill-current text-gray-400 ${page === 'maps' && 'text-indigo-300'}`} d="M17 23a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 010-2 4 4 0 004-4 1 1 0 012 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1zM7 13a1 1 0 01-1-1 4 4 0 00-4-4 1 1 0 110-2 4 4 0 004-4 1 1 0 112 0 4 4 0 004 4 1 1 0 010 2 4 4 0 00-4 4 1 1 0 01-1 1z" />
+                  </svg>
+                  <span className="text-sm font-medium">Maps</span>
+                </div>
+              </NavLink>
+            </li>
             {/* Orders */}
             {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${page === 'orders' && 'bg-gray-900'}`}>
               <NavLink exact to="/" className={`block text-gray-200 hover:text-white transition duration-150 ${page === 'orders' && 'hover:text-gray-200'}`}>
@@ -123,8 +146,8 @@ function Sidebar({
                     </svg>
                     <span className="text-sm font-medium">Orders</span>
                   </div> */}
-                  {/* Badge */}
-                  {/* <div className="flex flex-shrink-0 ml-2">
+            {/* Badge */}
+            {/* <div className="flex flex-shrink-0 ml-2">
                     <span className="inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded-sm">4</span>
                   </div>
                 </div>
@@ -153,8 +176,8 @@ function Sidebar({
                     </svg>
                     <span className="text-sm font-medium">Team</span>
                   </div> */}
-                  {/* Icon */}
-                  {/* <div className="flex flex-shrink-0 ml-2">
+            {/* Icon */}
+            {/* <div className="flex flex-shrink-0 ml-2">
                     <svg className={`w-3 h-3 flex-shrink-0 ml-1 fill-current text-gray-400 ${page.startsWith('team-') && 'transform rotate-180'}`} viewBox="0 0 12 12">
                       <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
                     </svg>
