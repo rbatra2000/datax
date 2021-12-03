@@ -59,46 +59,47 @@ const MapChart = () => {
 
     return (
         <div>
-                            {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
-                                <h2 key={name}>{name}</h2>
-                            ))}
-                            <br />
+            <h1>Busiest Avenues in NYC</h1>
+            {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+                <h2 key={name}>{name}</h2>
+            ))}
+            <br />
 
- <ComposableMap
-        >
-            <ZoomableGroup zoom={400} center={[-74.005974, 40.712776]} maxZoom={500}>
+            <ComposableMap
+            >
+                <ZoomableGroup zoom={400} center={[-74.005974, 40.712776]} maxZoom={500}>
 
-                <Geographies geography={geoUrl}>
-                    {({ geographies }) =>
-                        geographies
-                            .map(geo => (
-                                <Geography key={geo.rsmKey}
-                                    geography={geo}
-                                    fill="#EAEAEC"
-                                    stroke="#D6D6DA" />
-                            ))
-                    }
-                </Geographies>
-                {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
-                    <Line key={name} from={coordinates} to={coordinates2}>
-                    </Line>
-                ))}
-                {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+                    <Geographies geography={geoUrl}>
+                        {({ geographies }) =>
+                            geographies
+                                .map(geo => (
+                                    <Geography key={geo.rsmKey}
+                                        geography={geo}
+                                        fill="#EAEAEC"
+                                        stroke="#D6D6DA" />
+                                ))
+                        }
+                    </Geographies>
+                    {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+                        <Line key={name} from={coordinates} to={coordinates2}>
+                        </Line>
+                    ))}
+                    {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
 
-                    <Marker key={name} coordinates={coordinates}>
-                        <text
-                            textAnchor="middle"
-                            y={markerOffset}
-                            style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".05" }}
-                        >
-                            {name}
-                        </text>
-                    </Marker>
-                ))}
-            </ZoomableGroup>
-        </ComposableMap>
+                        <Marker key={name} coordinates={coordinates}>
+                            <text
+                                textAnchor="middle"
+                                y={markerOffset}
+                                style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".05" }}
+                            >
+                                {name}
+                            </text>
+                        </Marker>
+                    ))}
+                </ZoomableGroup>
+            </ComposableMap>
         </div>
-    
+
     );
 };
 
