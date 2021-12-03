@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard';
 import Subway from './pages/Subway';
 import Compare from './pages/Compare'
 import Maps from './pages/Maps';
+import Prediction from './pages/Prediction';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
           </Route>  
           <Route exact path="/maps">
             <Maps />
+          </Route>  
+          <Route exact path="/pred">
+            <Prediction />
           </Route>  
           <Route path="/">
             <Dashboard />

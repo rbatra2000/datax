@@ -3,6 +3,7 @@ import {
     ComposableMap,
     Geographies,
     Geography,
+    Line,
     Marker,
     ZoomableGroup
 } from "react-simple-maps";
@@ -34,16 +35,16 @@ const MapChart = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        fetch("https://datax-team9.herokuapp.com/maps")
+        fetch("https://datax-team9.herokuapp.com/busy")
             .then(response => response.json()
                 .then(data => {
                     // setDates([0,1,2,3,4,5])
                     // setData([10,20,30,40,50])
-                    console.log(data)
                     const obj = JSON.parse(data);
+                    console.log(obj)
                     var chartInfo = []
-                    for (var key in obj["Ranks"]) {
-                        chartInfo.push({ markerOffset: .003*key, name: "HELLO", coordinates: [obj["Longitude"][key], obj["Latitude"][key]] })
+                    for (var key in obj["Avenue"]) {
+                        chartInfo.push({ markerOffset: .003 * key, name: obj["Avenue"][key], coordinates: [obj["Longitude From"][key], obj["Latitude From"][key]], coordinates2: [obj["Longitude to"][key], obj["Latitude to"][key]] })
                     }
                     setData(chartInfo)
                     console.log(chartInfo)
@@ -57,36 +58,47 @@ const MapChart = () => {
     }
 
     return (
-        <ComposableMap
+        <div>
+                            {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+                                <h2 key={name}>{name}</h2>
+                            ))}
+                            <br />
+
+ <ComposableMap
         >
-            <ZoomableGroup zoom={400} center={[-74.005974,40.712776]} maxZoom={1000}>
+            <ZoomableGroup zoom={400} center={[-74.005974, 40.712776]} maxZoom={500}>
 
                 <Geographies geography={geoUrl}>
                     {({ geographies }) =>
                         geographies
-                        .map(geo => (
-                            <Geography key={geo.rsmKey}
-                                geography={geo}
-                                fill="#EAEAEC"
-                                stroke="#D6D6DA" />
-                        ))
+                            .map(geo => (
+                                <Geography key={geo.rsmKey}
+                                    geography={geo}
+                                    fill="#EAEAEC"
+                                    stroke="#D6D6DA" />
+                            ))
                     }
                 </Geographies>
-                {chartData.map(({ name, coordinates, markerOffset }) => (
+                {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+                    <Line key={name} from={coordinates} to={coordinates2}>
+                    </Line>
+                ))}
+                {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
+
                     <Marker key={name} coordinates={coordinates}>
-                                <circle r={.01} fill="#F53" />
                         <text
                             textAnchor="middle"
                             y={markerOffset}
-                            style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".01"}}
+                            style={{ fontFamily: "system-ui", fill: "#5D5A6D", fontSize: ".05" }}
                         >
                             {name}
                         </text>
                     </Marker>
                 ))}
             </ZoomableGroup>
-
         </ComposableMap>
+        </div>
+    
     );
 };
 
