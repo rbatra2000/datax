@@ -59,7 +59,7 @@ const MapChart = () => {
 
     return (
         <div>
-            <h1>Busiest Avenues in NYC</h1>
+            <h1><br>Busiest Avenues in NYC</br></h1>
             {chartData.map(({ name, coordinates, markerOffset, coordinates2 }) => (
                 <h2 key={name}>{name}</h2>
             ))}
